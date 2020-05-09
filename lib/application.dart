@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spendtracker/pages/index.dart';
+import 'package:spendtracker/routes.dart';
 
 
 class Application extends StatelessWidget {
@@ -8,6 +8,8 @@ class Application extends StatelessWidget {
     return MaterialApp(
         title: "Spend Tracker",
         theme: ThemeData(primarySwatch: Colors.green),
-        home: HomePage());
+        initialRoute: '/',
+        routes: routes,
+    );
   }
 }

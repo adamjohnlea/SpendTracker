@@ -6,9 +6,18 @@ class Menu extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          Text("Accounts"),
-          Text("Budget Items"),
-          Text("Types"),
+          ListTile(
+              title: Text("Accounts"),
+            onTap: () => Navigator.of(context).pushNamed('/accounts'),
+          ),
+          ListTile(
+            title: Text("Budget Items"),
+            onTap: () => Navigator.of(context).pushNamed('/items'),
+          ),
+          ListTile(
+            title: Text("Types"),
+            onTap: () => Navigator.of(context).pushNamed('/types'),
+          ),
         ],
       ),
     );
