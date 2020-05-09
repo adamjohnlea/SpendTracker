@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:spendtracker/pages/widgets/total_budget.dart';
+import 'package:spendtracker/pages/widgets/barline.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     var amount = '1,203.00';
 
     return Scaffold(
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.add),
+            icon: Icon(Icons.add),
             tooltip: "add",
             onPressed: () => print("Click"),
           ),
@@ -28,33 +28,19 @@ class HomePage extends StatelessWidget {
             height: MediaQuery.of(context).size.height - 200,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment:CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.red,
-                    ),
-                    Text("Withdraw"),
-                    Text("\$506")
-                  ],
+                Barline(
+                  height: 100.0,
+                  color: Colors.red,
+                  label: "Withdrawal",
+                  amount: "506",
                 ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 400.0,
-                      width: 100.0,
-                      color: Colors.green,
-                    ),
-                    Text("Deposit"),
-                    Text("\$1709")
-                  ],
+                Barline(
+                  height: 400.0,
+                  color: Colors.green,
+                  label: "Deposit",
+                  amount: "1709",
                 ),
               ],
             ),
@@ -64,5 +50,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-

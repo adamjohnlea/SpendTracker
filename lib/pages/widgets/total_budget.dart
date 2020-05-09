@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class TotalBudget extends StatelessWidget {
-
   final String amount;
 
   TotalBudget({@required this.amount});
@@ -13,10 +12,11 @@ class TotalBudget extends StatelessWidget {
       margin: EdgeInsets.all(10.0),
       alignment: Alignment.center,
       child: Text(
-        '\$$amount', style: TextStyle(
-        color: Colors.white,
-        fontSize: 30.0,
-      ),
+        '\$$amount',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30.0,
+        ),
       ),
       decoration: BoxDecoration(
         color: Colors.green,
