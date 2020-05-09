@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-
+      drawer: Menu(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
