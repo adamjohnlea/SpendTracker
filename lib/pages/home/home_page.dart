@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spendtracker/pages/widgets/total_budget.dart';
-import 'package:spendtracker/pages/widgets/barline.dart';
+import 'package:spendtracker/widgets/index.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
         title: Text("Home"),
         actions: <Widget>[
           IconButton(
@@ -19,6 +18,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
