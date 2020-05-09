@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/home/home_page.dart';
+import 'package:spendtracker/pages/index.dart';
+
 
 class Application extends StatelessWidget {
   @override
